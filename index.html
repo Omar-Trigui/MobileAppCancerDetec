@@ -410,10 +410,11 @@ $("#image-selector").change(function() {
     
            formdata = new FormData();
         var file = document.getElementById("image-selector").files[0];
+        console.log(file);
         if (formdata) {
           formdata.append("file", file);
           jQuery.ajax({
-            url: "http://web001.fogits.com:8000/api/prediction/check_prediction/",
+            url: "https://articles.free.beeceptor.com/upload_file",
             type: "POST",
             data: formdata,
             processData: false,
